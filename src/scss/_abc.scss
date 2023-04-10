@@ -1,0 +1,143 @@
+.scoreSlider{
+  &:hover{
+    .slick-next, .slick-prev{
+    background: rgba(231, 55, 37, 1) !important;
+  }}
+.slick-next, .slick-prev{
+  background: rgba(231, 55, 37, 0.61) !important;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    z-index: 1;
+    
+}
+.slick-next {
+  /* right: 10px; */
+  right: 53%;
+  top: 106%;
+}
+
+.slick-prev {
+  /* right: 45px; */
+  top: 106%;
+  left: 50%;
+}
+
+.slick-next {
+  // right: 6px;
+}
+
+.slick-prev {
+  // left: 6px;
+}
+
+.slick-prev:before {
+  content: "‹";
+}
+.slick-next:before {
+  content: "›";
+}
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 34px;
+  line-height: 2px;}
+}
+
+.moveTop {
+  -webkit-animation: moveTop 5s normal linear infinite;
+  animation: moveTop 5s normal linear infinite;
+}
+
+@keyframes moveTop {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+.overlay {
+  // background: #171717;
+  position: relative;
+  // border: 1px solid #2e2c73;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  // height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    .teamtext {
+      top: 0;
+     
+    }
+    .teamtext-main {
+      display: none;
+    }
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 0 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 0 20px;
+    color: #cc3c6e;
+  }
+  p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+.teamtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 23, 0.71) 39.58%,
+    #171717 100%
+  );
+  bottom: -140px;
+  transition: 0.5s;
+}
+.teamtext-main {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
